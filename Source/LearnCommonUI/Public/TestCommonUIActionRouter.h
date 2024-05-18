@@ -16,6 +16,7 @@ class LEARNCOMMONUI_API UTestCommonUIActionRouter : public UCommonUIActionRouter
 	
 // Begin Base Override ================================================================
 protected:
+	virtual TSharedRef<FCommonAnalogCursor> MakeAnalogCursor() const override;
 	virtual void PostAnalogCursorCreate() override;
 
 // End Base Override ==================================================================

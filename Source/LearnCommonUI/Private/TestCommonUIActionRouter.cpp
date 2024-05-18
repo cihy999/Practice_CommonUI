@@ -4,12 +4,19 @@
 #include "Input/CommonUIInputSettings.h"
 #include "Input/CommonAnalogCursor.h"
 #include "Framework/Application/SlateApplication.h"
+// 
+#include "TestAnalogCursor.h"
+
+TSharedRef<FCommonAnalogCursor> UTestCommonUIActionRouter::MakeAnalogCursor() const
+{
+	return FCommonAnalogCursor::CreateAnalogCursor<FTestAnalogCursor>(*this);
+}
 
 void UTestCommonUIActionRouter::PostAnalogCursorCreate()
 {
 	RegisterAnalogCursorTick();
 
-	// ßY®œ§£•ŒCommonGameViewportClient°A§]≠n®œ•ŒFCommonAnalogCursor
+	// Âç≥‰Ωø‰∏çÁî®CommonGameViewportClientÔºå‰πüË¶Å‰ΩøÁî®FCommonAnalogCursor
 	int32 processorIndex = UCommonUIInputSettings::Get().GetAnalogCursorSettings().PreprocessorPriority;
 	FSlateApplication::Get().RegisterInputPreProcessor(AnalogCursor, 2);
 }
