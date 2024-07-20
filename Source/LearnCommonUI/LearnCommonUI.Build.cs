@@ -13,8 +13,8 @@ public class LearnCommonUI : ModuleRules
 			"Core", 
 			"CoreUObject", 
 			"Engine", 
-			"InputCore", 
-			"EnhancedInput",
+			"InputCore",
+            "EnhancedInput",
             "GameplayTags",
             "CommonUI",
             "CommonInput"
@@ -22,7 +22,8 @@ public class LearnCommonUI : ModuleRules
 
         PrivateDependencyModuleNames.AddRange(new string[]
         {
-            "Slate"
+            "Slate",
+            "SlateCore"
         });
     }
 }

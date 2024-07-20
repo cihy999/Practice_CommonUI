@@ -9,13 +9,12 @@
  */
 class LEARNCOMMONUI_API FTestAnalogCursor : public FCommonAnalogCursor
 {
-// Begin Base Override ================================================================
+// Override ==================================================================================
 public:
 	FTestAnalogCursor(const UCommonUIActionRouterBase& InActionRouter);
-	virtual void Initialize() override;
 
 protected:
 	virtual void RefreshCursorVisibility() override;
 
-// End Base Override ==================================================================
+// End Base Override =========================================================================
 };

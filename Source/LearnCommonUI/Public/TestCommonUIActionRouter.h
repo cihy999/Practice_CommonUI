@@ -14,10 +14,9 @@ class LEARNCOMMONUI_API UTestCommonUIActionRouter : public UCommonUIActionRouter
 {
 	GENERATED_BODY()
 	
-// Begin Base Override ================================================================
+// Override =================================================================================
 protected:
 	virtual TSharedRef<FCommonAnalogCursor> MakeAnalogCursor() const override;
-	virtual void PostAnalogCursorCreate() override;
 
-// End Base Override ==================================================================
+// ==========================================================================================
 };
